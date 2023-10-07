@@ -1,0 +1,74 @@
+
+<header> 
+  <div class="user-info px-2 py-2">
+    <button *ngIf="langName === 'ab'" (click)="switchLang('en')" class="lang btn btn-primary"
+    >EN</button>
+    <button *ngIf="langName === 'en'" (click)="switchLang('ab')" class="lang btn btn-primary"
+    >عربي</button>
+  </div>
+    <nav class="navbar navbar-expand-sm">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" [ngClass]="{'re-greet': langName === 'ab'}"><button class="btn btn-primary nav-link">{{'btn1' | translate}}</button></li>
+        <li class="nav-item" [ngClass]="{'re-greet': langName === 'ab'}"><button class="btn btn-primary nav-link">{{'btn2' | translate}}</button></li>
+        <li class="nav-item" [ngClass]="{'re-greet': langName === 'ab'}"><button class="btn btn-primary nav-link">{{'btn3' | translate}}</button></li>
+      </ul>
+    </nav>
+</header>
+
+<main>
+    <h2 [ngClass]="{'re-greet': langName === 'ab'}">{{'h2' | translate}}</h2>
+    <table id="example" class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>{{'th1'| translate}}</th>
+          <th>{{'th2'| translate}}</th>
+          <th>{{'th3'| translate}}</th>
+          <th>{{'th4'| translate}}</th>
+          <th>{{'th5'| translate}}</th>
+          <th>{{'th6'| translate}}</th>
+          <th>{{'th7'| translate}}</th>
+          <th>{{'th8'| translate}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>12356784</td>
+          <td>12775</td>
+          <td>2{{'td1' | translate }}</td>
+          <td>{{'td2'| translate}}</td>
+          <td>
+            <button type="button" class="btn btn-primary">{{'td3'| translate}}</button>
+          </td>
+          <td>27/08/2023</td>
+          <td>{{'td4' | translate}}</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>34555558</td>
+          <td>12774</td>
+          <td>{{'td5' | translate}}</td>
+          <td>{{'td6' | translate}} </td>
+          <td>
+            <button type="button" class="btn btn-primary">{{'td7' | translate}}
+            </button>
+          </td>
+          <td>27/08/2023</td>
+          <td>{{'td8' | translate}}</td>
+        </tr>
+      </tbody>
+    </table>
+</main>
+<aside class="sidebar">
+  <p [ngClass]="{'re-greet': langName === 'ab'}">{{'p' | translate}} <br> 02/10/2023 11:00</p>
+  <ul>
+    <li [ngClass]="{'re-greet': langName === 'ab'}"><a href="#">{{'li' | translate}}</a></li>
+    <li [ngClass]="{'re-greet': langName === 'ab'}"><a href="#">{{'li1' | translate}}</a></li>
+    <li [ngClass]="{'re-greet': langName === 'ab'}"><a href="#">{{'li2' | translate}}</a></li>
+    <li [ngClass]="{'re-greet': langName === 'ab'}"><a href="#">{{'li3' | translate}}</a></li>
+    <li [ngClass]="{'re-greet': langName === 'ab'}"><a href="#">{{'li4' | translate}}</a></li>
+    <li [ngClass]="{'re-greet': langName === 'ab'}"><a href="#">{{'li5' | translate}}</a></li>
+    <li [ngClass]="{'re-greet': langName === 'ab'}"><a href="#">{{'li6' | translate}}</a></li>
+
+  </ul>
+</aside>
